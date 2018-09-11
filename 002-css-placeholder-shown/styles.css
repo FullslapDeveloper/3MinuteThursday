@@ -1,0 +1,25 @@
+body {
+    --main-color: rgb(87, 77, 223);
+    font-size: 24px;
+    color: var(--main-color);
+    text-align: center;
+    margin: 19% auto;
+}
+
+input {
+    font-size: inherit;
+    color: inherit;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.fd-message {
+    opacity: 0;
+    transition: opacity .3s ease-out, transform .5s ease-out;
+}
+
+input:not(:placeholder-shown) + .fd-message {
+    opacity: 1;
+    transform: translateY(10px);
+}
